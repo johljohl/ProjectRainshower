@@ -5,15 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.cdnfonts.com/css/ds-digital" rel="stylesheet" />
-    <link href="https://fonts.cdnfonts.com/css/surfquest" rel="stylesheet">
-                
+    <link href="https://fonts.cdnfonts.com/css/surfquest" rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css" />
     <title>Weather&Watch</title>
   </head>
   <body>
-    
-
     <div class="container">
       <h1>Project Rainshower</h1>
       <div class="game">
@@ -29,19 +26,19 @@
               <div class="weatherTitel"><h2>Local Weather</h2></div>
               <div class="location"></div>
               <div class="weatherIcons"><img src="img/watch.png" alt="" /></div>
-              <div class="description"></div>
-              <div class="temprature"></div>
-             
-              <div class="notes"><span></span></div>
-              
 
-                <div id="timer" class="time"></div>
+              <div class="weatherTempValue">
+                <span>Loading...</span>
+                <span class="">--</span>
               </div>
+              <div class="weatherTempDescription"><p></p></div>
+
+              <span id="timer" class="time"></span>
             </div>
+            <div id="timer" class="time"></div>
           </div>
         </div>
       </div>
-      
     </div>
     <script src="script.js"></script>
   </body>
