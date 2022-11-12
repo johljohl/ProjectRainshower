@@ -81,7 +81,10 @@ h3 {
 }
 
 .shell {
-  border: 9px solid grey;
+  border-top: 9px solid lightgrey;
+  border-left: 8px solid rgb(102, 102, 102);
+  border-bottom: 8px solid grey;
+  border-right: 7px solid rgb(182, 181, 181);
   border-radius: 5px;
   width: 245px;
   height: 210px;
@@ -122,19 +125,11 @@ h2 {
   font-family: "DS-Digital", sans-serif;
   text-align: center;
 }
-.weatherTempDescription {
-  font-family: "DS-Digital", sans-serif;
-  text-align: center;
-}
+
 .location {
   font-family: "DS-Digital", sans-serif;
   text-align: center;
 }
-#displayWeather {
-  font-family: "DS-Digital", sans-serif;
-  text-align: center;
-}
-
 .time {
   font-family: "DS-Digital", sans-serif;
 
