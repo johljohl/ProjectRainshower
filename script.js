@@ -70,8 +70,9 @@ function showWeather() {
   icons = data.weather[0].icon;
   temp = Math.floor(data.main.temp - kelvin);
   tempDescription = data.weather[0].description;
+  country = data.sys.country;
 
-  weatherLocation.innerHTML = `${city}`;
+  weatherLocation.innerHTML = `${city}, ${country}`;
   weatherTemp.innerHTML = `${temp}°C, ${tempDescription}`;
   weatherIcon.innerHTML = `<img src="img/32x32/${icons}.png" />`;
 }
