@@ -1,23 +1,21 @@
 // aplication Data
-const cityLocation = "Helsingborg";
+const cityLocation = "Helsingborg"; //
 const apiKey = "c7c70ffe100679d44d96ba6069ce2b4d"; // The apiKey for the weatherapplication
-const kelvin = 273;
+const kelvin = 273; //This is for conversion to celius format
 
-// se
+// DOM elements
 
 let notefiction = document.querySelector(".notes span");
 const weatherLocation = document.querySelector(".location");
-const weathericon = document.querySelector(".weatherIcons");
+const weatherIcon = document.querySelector(".weatherIcons");
 const weatherTemp = document.querySelector(".weatherTempValue");
 
 // Below is the geoposition function for getting loaction information  with help from AJAX requests
 
 function getGeoPosition() {
-  let xhr = new XMLHttpRequest();
-  xhr.open(
-    "GET",
-    `http://api.openweathermap.org/geo/1.0/direct?q=${cityLocation}&limit=5&appid=${apiKey}`
-  );
+  let urlGeo = `http://api.openweathermap.org/geo/1.0/direct?q=${cityLocation}&limit=5&appid=${apiKey}`;
+  xhr = new XMLHttpRequest();
+  xhr.open("GET", urlGeo);
   xhr.responseType = "text";
 
   xhr.send();
@@ -41,10 +39,10 @@ function getGeoPosition() {
 
 // Below is the main function for getting weather information  with help from AJAX requests
 function getWeather(lat, long) {
-  let api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`;
-  console.log(api);
+  let urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`;
+  console.log(urlWeather);
   ajax = new XMLHttpRequest();
-  ajax.open("GET", api);
+  ajax.open("GET", urlWeather);
   ajax.reponseType = "text";
 
   ajax.addEventListener(
@@ -56,7 +54,7 @@ function getWeather(lat, long) {
         console.log(data);
         showWeather();
       } else {
-        w.textContent = "error" + ajax.status;
+        console.log("error" + ajax.status);
       }
     },
     false
@@ -75,12 +73,12 @@ function showWeather() {
 
   weatherLocation.innerHTML = `${city}`;
   weatherTemp.innerHTML = `${temp}°C, ${tempDescription}`;
-  weathericon.innerHTML = `<img src="img/32x32/${icons}.png" />`;
+  weatherIcon.innerHTML = `<img src="img/32x32/${icons}.png" />`;
 }
 
 //-------------the function below is for the watch----//
 
-function clock() {
+function watch() {
   const today = new Date();
   let hour = today.getHours();
   let minutes = today.getMinutes();
@@ -95,7 +93,7 @@ function clock() {
     ${day} 
     /${month} Time
    ${hour}:${minutes}:${seconds}`;
-  setTimeout(clock, 1000);
+  setTimeout(watch, 1000);
 }
 
 function checkTime(i) {
@@ -109,7 +107,7 @@ function checkTime(i) {
 function init() {
   console.log("connected");
   getGeoPosition();
-  clock();
+  watch();
 }
 
 init();
