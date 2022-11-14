@@ -4,7 +4,6 @@ const apiKey = "c7c70ffe100679d44d96ba6069ce2b4d"; // The apiKey for the weather
 
 // DOM elements
 
-let notefiction = document.querySelector(".notes span");
 const weatherLocation = document.querySelector(".location");
 const weatherIcon = document.querySelector(".weatherIcons");
 const weatherTemp = document.querySelector(".weatherTempValue");
@@ -68,7 +67,7 @@ function showWeather() {
   city = data.name;
   country = data.sys.country;
   icons = data.weather[0].icon;
-  temp = Math.ceil(data.main.temp);
+  temp = Math.floor(data.main.temp);
   tempDescription = data.weather[0].description;
 
   weatherLocation.innerHTML = `${city}, ${country}`;
@@ -91,8 +90,8 @@ function watch() {
 
   document.getElementById("timer").innerHTML = `Todays date
     ${day} 
-    /${month} Time
-   ${hour}:${minutes}:${seconds}`;
+    ${month} 
+    Time ${hour}:${minutes}:${seconds}`;
   setTimeout(watch, 1000);
 }
 
