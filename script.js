@@ -1,7 +1,6 @@
 // aplication Data
 const cityLocation = "Helsingborg"; //
 const apiKey = "c7c70ffe100679d44d96ba6069ce2b4d"; // The apiKey for the weatherapplication
-const kelvin = 273; //This is for conversion to celius format
 
 // DOM elements
 
@@ -39,7 +38,7 @@ function getGeoPosition() {
 
 // Below is the main function for getting weather information  with help from AJAX requests
 function getWeather(lat, long) {
-  let urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}`;
+  let urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
   console.log(urlWeather);
   ajax = new XMLHttpRequest();
   ajax.open("GET", urlWeather);
@@ -65,12 +64,12 @@ function getWeather(lat, long) {
 
 // showWeather fuction
 function showWeather() {
-  // name, icons, temp, description
+  // name, country, icons, temp, description,
   city = data.name;
-  icons = data.weather[0].icon;
-  temp = Math.floor(data.main.temp - kelvin);
-  tempDescription = data.weather[0].description;
   country = data.sys.country;
+  icons = data.weather[0].icon;
+  temp = Math.ceil(data.main.temp);
+  tempDescription = data.weather[0].description;
 
   weatherLocation.innerHTML = `${city}, ${country}`;
   weatherTemp.innerHTML = `${temp}°C, ${tempDescription}`;
