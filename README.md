@@ -8,4 +8,4 @@ This is a simple weather application project.
 
 It includes
 
-The local weather in Helsingborg and time, Sweden
+The local weather and time in Helsingborg, Sweden
