@@ -1,4 +1,4 @@
-Project RainShower
+Weather&Watch - Project RainShower
 
 A Weather application in Game&Watch style
 
