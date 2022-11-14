@@ -84,10 +84,10 @@ h3 {
 }
 
 .shell {
-  border-top: 9px solid lightgrey;
-  border-left: 8px solid rgb(102, 102, 102);
-  border-bottom: 8px solid grey;
-  border-right: 7px solid rgb(182, 181, 181);
+  border-top: 9px solid rgb(185, 185, 185);
+  border-left: 9px solid rgb(102, 102, 102);
+  border-bottom: 9px solid grey;
+  border-right: 9px solid rgb(170, 170, 170);
   border-radius: 5px;
   width: 245px;
   height: 210px;
