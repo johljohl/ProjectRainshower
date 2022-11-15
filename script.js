@@ -67,7 +67,7 @@ function showWeather() {
   city = data.name;
   country = data.sys.country;
   icons = data.weather[0].icon;
-  temp = Math.floor(data.main.temp);
+  temp = Math.round(data.main.temp);
   tempDescription = data.weather[0].description;
 
   weatherLocation.innerHTML = `${city}, ${country}`;
@@ -96,6 +96,7 @@ function watch() {
 }
 
 function checkTime(i) {
+  // to add a zero in front of minutes and seconds
   if (i < 10) {
     i = "0" + i;
   }
