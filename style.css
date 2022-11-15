@@ -141,3 +141,21 @@ h2 {
   display: block;
   text-align: center;
 }
+
+@media only screen and (max-width: 916px) {
+  h1 {
+    display: none;
+
+    margin: 0;
+  }
+  .game {
+    zoom: 122%;
+  }
+}
+
+@media only screen and (max-width: 412px) {
+  .game {
+    zoom: 80%;
+    top: 400px;
+  }
+}

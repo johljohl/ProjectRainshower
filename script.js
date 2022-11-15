@@ -89,8 +89,7 @@ function watch() {
   seconds = checkTime(seconds);
 
   document.getElementById("timer").innerHTML = `Todays date
-    ${day} 
-    ${month} 
+    ${day} / ${month} 
     Time ${hour}:${minutes}:${seconds}`;
   setTimeout(watch, 1000);
 }
