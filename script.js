@@ -11,7 +11,7 @@ const weatherTemp = document.querySelector(".weatherTempValue");
 // Below is the geoposition function for getting loaction information  with help from AJAX requests
 
 function getGeoPosition() {
-  let urlGeo = `http://api.openweathermap.org/geo/1.0/direct?q=${cityLocation}&limit=5&appid=${apiKey}`;
+  let urlGeo = `https://api.openweathermap.org/geo/1.0/direct?q=${cityLocation}&limit=5&appid=${apiKey}`;
   xhr = new XMLHttpRequest();
   xhr.open("GET", urlGeo);
   xhr.responseType = "text";
