@@ -1,6 +1,8 @@
 // aplication Data
-const cityLocation = "Helsingborg"; //
+
+const cityLocation = "Helsingborg"; // change this if you want a different city location
 const apiKey = "c7c70ffe100679d44d96ba6069ce2b4d"; // The apiKey for the weatherapplication
+const celsius = "=metric"; // to convert the temperature
 
 // DOM elements
 
@@ -36,38 +38,37 @@ function getGeoPosition() {
 }
 
 // Below is the main function for getting weather information  with help from AJAX requests
+
 function getWeather(lat, long) {
-  let urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
+  let urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units${celsius}`;
   console.log(urlWeather);
-  ajax = new XMLHttpRequest();
-  ajax.open("GET", urlWeather);
-  ajax.reponseType = "text";
+  xhr = new XMLHttpRequest();
+  xhr.open("GET", urlWeather);
+  xhr.reponseType = "text";
 
-  ajax.addEventListener(
-    "load",
-    () => {
-      if (ajax.status === 200) {
-        weatherLocation.textContent = "success";
-        data = JSON.parse(ajax.responseText);
-        console.log(data);
-        showWeather();
-      } else {
-        console.log("error" + ajax.status);
-      }
-    },
-    false
-  );
+  xhr.send();
 
-  ajax.send();
+  xhr.addEventListener("load", () => {
+    if (xhr.status === 200) {
+      weatherLocation.textContent = "success";
+      data = JSON.parse(xhr.responseText);
+      console.log(data);
+
+      showWeather();
+    } else {
+      console.log("error" + xhr.status);
+    }
+  });
 }
 
-// showWeather fuction
+// showWeather fuction builds the weather data
+
 function showWeather() {
   // name, country, icons, temp, description,
   city = data.name;
   country = data.sys.country;
   icons = data.weather[0].icon;
-  temp = Math.round(data.main.temp);
+  temp = Math.round(data.main.temp); // uses math.round to rounded to the nearest integer
   tempDescription = data.weather[0].description;
 
   weatherLocation.innerHTML = `${city}, ${country}`;

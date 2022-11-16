@@ -141,6 +141,12 @@ h2 {
   display: block;
   text-align: center;
 }
+.container .mrgamewatch {
+  display: none;
+}
+.mrgamewatch2 {
+  display: none;
+}
 
 @media only screen and (max-width: 916px) {
   h1 {
@@ -149,13 +155,31 @@ h2 {
     margin: 0;
   }
   .game {
-    zoom: 122%;
+    top: 15px;
+    zoom: 110%;
   }
 }
 
 @media only screen and (max-width: 412px) {
+  body {
+    background-color: #929d97;
+  }
   .game {
     zoom: 80%;
-    top: 400px;
+    top: 350px;
+  }
+  .container .mrgamewatch {
+    display: block;
+    position: relative;
+    top: 280px;
+    left: 130px;
+    width: 250px;
+  }
+  .mrgamewatch2 {
+    display: block;
+    position: relative;
+    top: 175px;
+    left: 70px;
+    width: 180px;
   }
 }

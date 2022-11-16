@@ -8,7 +8,7 @@ This is a simple weather application project.
 
 Its display local weather and time in Helsingborg, Sweden.
 
-Some the of features included:
+Some of the features included:
 
 Temperature values
 
