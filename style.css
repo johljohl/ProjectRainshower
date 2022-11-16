@@ -107,6 +107,9 @@ h3 {
   top: 7px;
   left: 7px;
 }
+.dpad img {
+  display: none;
+}
 h2 {
   font-family: "DS-Digital", sans-serif;
   text-align: center;
@@ -164,39 +167,81 @@ h2 {
 }
 
 @media only screen and (max-width: 412px) {
-  body {
-    background-color: #929d97;
-  }
   .container {
-    padding-top: 50px;
-    padding-bottom: 50px;
     position: relative;
-    background-color: #929d97;
+
+    background-color: black;
+    padding-top: 65px;
   }
   .game {
-    zoom: 80%;
-    top: 350px;
-  }
-  .container .mrgamewatch {
-    display: block;
+    border: 2px solid grey;
+    border-radius: 15px;
+    height: 700px;
+    width: 330px;
+    background: lightgrey;
     position: relative;
-    top: 280px;
-    left: 130px;
-    width: 250px;
+    margin: auto;
   }
-  .mrgamewatch2 {
-    display: none;
-    position: relative;
-    top: 175px;
-    left: 70px;
-    width: 180px;
+  .gamewatch img {
+    width: 60px;
+    position: absolute;
+    left: 20px;
+    top: 305px;
   }
-  .container .mrgamewatch3 {
+  .gamewatch2 img {
+    width: 70px;
+    position: absolute;
+    left: 240px;
+    top: 300px;
+  }
+
+  .btn1 {
+    width: 40px;
+    height: 40px;
+    background-color: rebeccapurple;
+
+    border-radius: 50%;
+    position: absolute;
+    top: 390px;
+    left: 260px;
+    border: 4px solid black;
+  }
+  .btn2 {
+    width: 40px;
+    height: 40px;
+    background-color: rebeccapurple;
+
+    border-radius: 50%;
+    position: absolute;
+    top: 420px;
+    left: 200px;
+
+    border: 4px solid black;
+  }
+  .dpad img {
     display: block;
     position: absolute;
-    padding: 0;
-    top: 120px;
-    left: 100px;
-    width: 180px;
+    top: 350px;
+    width: 150px;
+  }
+
+  .shell {
+    border: black;
+    background-color: black;
+    width: 305px;
+    height: 250px;
+    position: absolute;
+    top: 40px;
+    left: 12px;
+  }
+  .outershell {
+    border: 3px solid black;
+    border-radius: 4px;
+    width: 225px;
+    height: 210px;
+    background-color: #929d97;
+    position: absolute;
+    top: 15px;
+    left: 37px;
   }
 }
