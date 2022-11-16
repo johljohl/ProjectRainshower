@@ -168,8 +168,9 @@ h2 {
     background-color: #929d97;
   }
   .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
     position: relative;
-
     background-color: #929d97;
   }
   .game {
@@ -184,7 +185,7 @@ h2 {
     width: 250px;
   }
   .mrgamewatch2 {
-    display: block;
+    display: none;
     position: relative;
     top: 175px;
     left: 70px;
@@ -194,7 +195,7 @@ h2 {
     display: block;
     position: absolute;
     padding: 0;
-    top: 90px;
+    top: 120px;
     left: 100px;
     width: 180px;
   }
