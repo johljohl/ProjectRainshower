@@ -147,6 +147,9 @@ h2 {
 .mrgamewatch2 {
   display: none;
 }
+.mrgamewatch3 {
+  display: none;
+}
 
 @media only screen and (max-width: 916px) {
   h1 {
@@ -162,6 +165,11 @@ h2 {
 
 @media only screen and (max-width: 412px) {
   body {
+    background-color: #929d97;
+  }
+  .container {
+    position: relative;
+
     background-color: #929d97;
   }
   .game {
@@ -180,6 +188,14 @@ h2 {
     position: relative;
     top: 175px;
     left: 70px;
+    width: 180px;
+  }
+  .container .mrgamewatch3 {
+    display: block;
+    position: absolute;
+    padding: 0;
+    top: 90px;
+    left: 100px;
     width: 180px;
   }
 }
