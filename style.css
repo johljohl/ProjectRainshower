@@ -24,27 +24,10 @@ h3 {
   padding-top: 20px;
 }
 .game {
-  border: 8px solid darkred;
+  border: 8px solid whitesmoke;
   width: 453px;
   height: 287px;
-  background: linear-gradient(
-    #d7d7d7,
-    #c3c3c3,
-    #cccccc,
-    #c6c6c6,
-    #d7d7d7,
-    #c3c3c3,
-    #cccccc,
-    #c6c6c6,
-    #d7d7d7,
-    #c3c3c3,
-    #cccccc,
-    #c6c6c6,
-    #d7d7d7,
-    #c3c3c3,
-    #cccccc,
-    #c6c6c6
-  );
+  background: lightskyblue;
   position: relative;
   margin: auto;
 }
@@ -70,7 +53,7 @@ h3 {
   position: absolute;
   top: 210px;
   left: 25px;
-  border: 4px solid darkred;
+  border: 4px solid whitesmoke;
 }
 .btn2 {
   width: 30px;
@@ -82,7 +65,7 @@ h3 {
   top: 210px;
   left: 385px;
 
-  border: 4px solid darkred;
+  border: 4px solid whitesmoke;
 }
 
 .shell {
@@ -91,52 +74,60 @@ h3 {
   border-bottom: 9px solid grey;
   border-right: 9px solid rgb(170, 170, 170);
   border-radius: 5px;
+  background: linear-gradient(
+    #d7d7d7,
+    #c3c3c3,
+    #cccccc,
+    #c6c6c6,
+    #d7d7d7,
+    #c3c3c3,
+    #cccccc,
+    #c6c6c6,
+    #d7d7d7,
+    #c3c3c3,
+    #cccccc,
+    #c6c6c6,
+    #d7d7d7,
+    #c3c3c3,
+    #cccccc,
+    #c6c6c6
+  );
   width: 245px;
-  height: 210px;
+  height: 230px;
   position: absolute;
-  top: 40px;
+  top: 20px;
   left: 95px;
+}
+.shell p {
+  text-align: center;
+  margin: 3px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: red;
 }
 .outershell {
   border: 3px solid black;
   border-radius: 4px;
+
+  position: absolute;
+  top: 23px;
+  left: 7px;
   width: 225px;
   height: 190px;
-  background-color: #929d97;
-  position: absolute;
-  top: 7px;
-  left: 7px;
-}
-.dpad img {
-  display: none;
-}
-h2 {
-  font-family: "DS-Digital", sans-serif;
-  text-align: center;
-  font-size: 15px;
-  padding: 0px;
-}
-.weatherIcons img {
-  display: block;
+  border: 2px solid;
   margin: auto;
-  width: 58px;
-  padding-bottom: 5px;
-}
-.notes {
-  font-family: "DS-Digital", sans-serif;
-
-  display: block;
-  text-align: center;
-  background-color: red;
-}
-.weatherTempValue {
-  font-family: "DS-Digital", sans-serif;
-  text-align: center;
+  background: url("img/back.jpg") repeat-x;
+  overflow: hidden;
+  background-size: cover;
+  animation: marioworld 6s linear infinite;
 }
 
-.location {
-  font-family: "DS-Digital", sans-serif;
-  text-align: center;
+#mario {
+  height: 45px;
+  width: 45px;
+  position: relative;
+  top: 123px;
+  background-image: url("img/mario.webp");
+  background-size: cover;
 }
 .time {
   font-family: "DS-Digital", sans-serif;
@@ -144,104 +135,11 @@ h2 {
   display: block;
   text-align: center;
 }
-.container .mrgamewatch {
-  display: none;
-}
-.mrgamewatch2 {
-  display: none;
-}
-.mrgamewatch3 {
-  display: none;
-}
-
-@media only screen and (max-width: 916px) {
-  h1 {
-    display: none;
-
-    margin: 0;
+@keyframes marioworld {
+  from {
+    background-position: 1000px;
   }
-  .game {
-    top: 15px;
-    zoom: 110%;
-  }
-}
-
-@media only screen and (max-width: 412px) {
-  .container {
-    position: relative;
-
-    background-color: black;
-    padding-top: 65px;
-  }
-  .game {
-    border: 2px solid grey;
-    border-radius: 15px;
-    height: 700px;
-    width: 330px;
-    background: lightgrey;
-    position: relative;
-    margin: auto;
-  }
-  .gamewatch img {
-    width: 60px;
-    position: absolute;
-    left: 20px;
-    top: 305px;
-  }
-  .gamewatch2 img {
-    width: 70px;
-    position: absolute;
-    left: 240px;
-    top: 300px;
-  }
-
-  .btn1 {
-    width: 40px;
-    height: 40px;
-    background-color: rebeccapurple;
-
-    border-radius: 50%;
-    position: absolute;
-    top: 390px;
-    left: 260px;
-    border: 4px solid black;
-  }
-  .btn2 {
-    width: 40px;
-    height: 40px;
-    background-color: rebeccapurple;
-
-    border-radius: 50%;
-    position: absolute;
-    top: 420px;
-    left: 200px;
-
-    border: 4px solid black;
-  }
-  .dpad img {
-    display: block;
-    position: absolute;
-    top: 350px;
-    width: 150px;
-  }
-
-  .shell {
-    border: black;
-    background-color: black;
-    width: 305px;
-    height: 250px;
-    position: absolute;
-    top: 40px;
-    left: 12px;
-  }
-  .outershell {
-    border: 3px solid black;
-    border-radius: 4px;
-    width: 225px;
-    height: 210px;
-    background-color: #929d97;
-    position: absolute;
-    top: 15px;
-    left: 37px;
+  to {
+    background-position: -230px;
   }
 }
