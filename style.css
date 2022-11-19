@@ -40,8 +40,8 @@ h3 {
 .gamewatch2 img {
   width: 70px;
   position: absolute;
-  left: 370px;
-  top: 50px;
+  left: 10px;
+  top: 115px;
 }
 
 .btn1 {
@@ -125,9 +125,44 @@ h3 {
   height: 45px;
   width: 45px;
   position: relative;
-  top: 123px;
+  top: 40px;
   background-image: url("img/mario.webp");
   background-size: cover;
+}
+#goomba {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  top: 105px;
+  left: 220px;
+  background-image: url("img/goomba.gif");
+  background-size: cover;
+  animation: goomba 4s infinite;
+}
+@keyframes goomba {
+  0% {
+    left: 250px;
+  }
+  100% {
+    left: -80px;
+  }
+}
+.jump {
+  animation: jump 0.5s;
+}
+@keyframes jump {
+  0% {
+    top: 35px;
+  }
+  50% {
+    top: 10px;
+  }
+  75% {
+    top: 10px;
+  }
+  100% {
+    top: 25;
+  }
 }
 .time {
   font-family: "DS-Digital", sans-serif;

@@ -1,30 +1,46 @@
-//-------------the function below is for the watch----//
+const mario = document.getElementById("mario");
+const goomba = document.getElementById("goomba");
+const score = document.getElementById("score");
 
-function watch() {
-  const today = new Date();
-  let hour = today.getHours();
-  let minutes = today.getMinutes();
-  let seconds = today.getSeconds();
-  let day = today.getDate();
-  let month = today.getMonth();
-  month++;
-  minutes = checkTime(minutes);
-  seconds = checkTime(seconds);
+let mySound = new Audio("sound/mariojump.mp3");
 
-  document.getElementById("timer").innerHTML = `Todays date
-    ${day} / ${month} 
-    Time ${hour}:${minutes}:${seconds}`;
-  setTimeout(watch, 1000);
+let myMusic = new Audio("sound/theme.mp3");
+
+function jump() {
+  mario.classList.add("jump");
+  setTimeout(() => {
+    mario.classList.remove("jump");
+  }, 500);
 }
-
-function checkTime(i) {
-  // to add a zero in front of minutes and seconds
-  if (i < 10) {
-    i = "0" + i;
+document.addEventListener("click", function (event) {
+  if (!mario.classList.contains("jump")) {
+    jump();
+    mySound.play();
+    myMusic.play();
   }
-  return i;
-}
+});
 
-// The function below is for the init function which loads the page//
+setInterval(() => {
+  score.innerText++;
+  const marioTop = parseInt(
+    window.getComputedStyle(mario).getPropertyValue("top")
+  );
+  const goombaLeft = parseInt(
+    window.getComputedStyle(goomba).getPropertyValue("left")
+  );
 
-watch();
+  if (goombaLeft < 0) {
+    goomba.style.display = "none";
+  } else {
+    goomba.style.display = "";
+  }
+
+  if (goombaLeft < 50 && goombaLeft > 0 && marioTop > 150) {
+    alert(
+      "Game Over man, game over!! \n\nYour score was: " +
+        score.innerText +
+        "\n\nPress a key to play again!"
+    );
+    location.reload();
+  }
+}, 50);
